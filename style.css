@@ -1,0 +1,110 @@
+body{
+height:100%;
+}
+
+@keyframes animatedBackground {
+	from { background-position: -100% 0; }
+	to { background-position: 0% 0; }
+}
+
+
+#animate-area{ 
+    text-align:center;
+    position: absolute;
+    width: 100%; 
+    z-index: 0;
+    background-image:url('mount.png');
+    background-size: 590% 100%;
+    background-repeat: repeat-x;
+    min-width: 500px;
+    min-height: 600px;
+    animation: animatedBackground 6s linear infinite;
+
+}
+
+.image{
+	
+	width:10%;
+	height:10%;
+	margin-top:20%;
+}
+
+
+.image-up {
+	width:10%;
+	height:10%;
+	margin-top:10%;
+}
+
+
+.image-down{
+
+	width:10%;
+	height:10%;
+	margin-top:30%;
+}
+
+
+
+#hurdle {
+position:absolute;
+	width:150px;
+  	height:70px;
+  	background-image: url('bird.png');
+  	top:150px;
+  	left:60%;
+  	margin-left:-100px;
+  	-webkit-animation:movinghurdle 40s infinite;
+	
+}
+
+#hurdle1{
+	position:absolute;
+	width:150px;
+  	height:70px;
+  	background-image: url('bird.png');
+  	top:180px;
+  	left:60%;
+  	margin-left:-10px;
+  	-webkit-animation:hurdle1 20s infinite;
+	background-size:150px 70px;
+}
+#hurdle2{
+	
+	width:150px;
+  	height:70px;
+  	background-image: url('bird.png');
+  	position:absolute;
+  	top:420px;
+  	left:10%;
+  	margin-left:-120px;
+  	-webkit-animation:hurdle2 25s infinite;
+	background-size:150px 70px;
+
+}
+
+@-webkit-keyframes movinghurdle{
+  0%{left:90%;}
+  50%{top:10%;}
+  100%{bottom:30%;}
+}
+@-webkit-keyframes hurdle1 {
+	
+ 0%{left:90%;}
+  50%{left:0%;}
+  100%{left:90%;}
+}
+@-webkit-keyframes hurdle2 {
+	
+  0%{left:90%;}
+  30%{left:10%;}
+  100%{left:90%;}
+}
+
+.tab div {
+    display: none;
+}
+
+.tab div:target {
+    display: block;
+}
